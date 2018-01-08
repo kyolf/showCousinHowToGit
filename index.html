@@ -42,6 +42,25 @@
       <li>Write the command 'git pull origin master' or 
           'git pull' if you did 'git push -u origin master' before 'git pull' </li>
     </ol>
+    <h1>How to work with multiple collaborators</h1>
+    <ol>
+      <li>If you are admin or the repository host, invite the collaborators through settings</li>
+      <li>Open your terminal and change the path to the directory where you started your repository</li>
+      <li>Create branches (a path that copies where you have in the 
+          current repository over to another version)
+          by writing the command 'git checkout -b branchName'
+          (-b means to create a branch
+           checkout means to go to that branch)
+           <br>
+          <b>branchName can be any name (best practice is to name it based on feature)</b></li>
+      <li>Repeat steps 4 - 11 from Steps in starting a repository if you make any changes</li>
+      <li>Once you are finish with a component or feature in this branch,
+          you can copy when you have in this branch to the master branch (the final copy of your code)</li>
+      <li>Write the command 'git checkout origin master' in order to go to the master branch</li>
+      <li>Write the command 'git merge origin branchName' in order to go to get what you from that branch
+          and overwrite the one in master.</li>
+      <li>Once that is completed, do a git push</li>
+    </ol>
     <h1>Git Commands</h1>
     <ul>
       <li>git add .  -  
@@ -52,10 +71,17 @@
           that you will save into the local repository</li>    
       <li>git add remote origin repo-link  -  
           Connects your local repository to the online repository</li>
+      <li>git checkout name  -  
+          Depending on what you put in the name part, it can go to another branch 
+          or a previous saved point/commit</li>
+      <li>git checkout -b name  -  
+          adding a -b will create a new branch and then makes you go to that branch</li>
       <li>git commit -m "Message"  -  
           Saves the files you changed into the local repository</li>
       <li>git init  -  
           Creates a local repository</li>
+      <li>git merge origin branchName  -  
+          Overwrites the current branch you are in with the branch you put as branchName</li>
       <li>git pull origin master  -  
           Pulls all the changes that were made by a fellow collaborator
           and places those changes into the current local repository</li>
